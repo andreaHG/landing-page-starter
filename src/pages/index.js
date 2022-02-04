@@ -1,62 +1,87 @@
-import React from 'react';
-import { ThemeProvider } from 'theme-ui';
-import theme from 'theme';
-import Layout from 'components/layout';
-import Banner from 'sections/banner';
-import Services from 'sections/services';
-import WorkHard from 'sections/work-hard';
-import UltimateFeatures from 'sections/ultimate-features';
-import {individual,team,org,icon1,icon2,icon3} from 'assets/images/icons'
-import banner from 'assets/images/banner.png';
-import workHard from 'assets/images/work-hard.png';
+import React from "react";
+import { ThemeProvider } from "theme-ui";
+import theme from "theme";
+import Layout from "components/layout";
+import Banner from "sections/banner";
+import Services from "sections/services";
+import WorkHard from "sections/work-hard";
+import UltimateFeatures from "sections/ultimate-features";
+import {
+  individual,
+  icon2,
+  icon3,
+  icon4,
+  icon5,
+  chat,
+} from "assets/images/icons";
+import workHard from "assets/images/wheel-chair.jpeg";
+import banner from "assets/images/person-care-rides.jpeg";
 
-console.log('image: ', banner);
+console.log("image: ", banner);
 const image1 = banner;
 const image2 = workHard;
-const productName = 'CareRides';
+const productName = "CareRides";
 
-const tagline = 'In one line Why is your product important to users';
+const tagline = "Caring transportation for those who need it most";
 
-const visionStatement = 'In a couple of sentence please describe the the product vision statement';
+const visionStatement =
+  "For patients with disabilities who do not have transportation, CareRides is a cross-platform app that connects patients with volunteer drivers for transportation to medical appointments. Acommodates individuals who may not have access through these mainstream services and is also available in multiple channels, such as phone and text.";
 
 const features = [
   {
-    id: 1, icon: individual, title: 'Feature 1',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
+    id: 1,
+    icon: icon2,
+    title: "Schedule Ahead",
+    description: `Plan your ride so you never miss an appointment time.`,
   },
   {
-    id: 2, icon: team, title: 'Feature 2',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
+    id: 2,
+    icon: icon4,
+    title: "Navigate with Ease",
+    description: `Simple, intuitive app that is easy to navigate.`,
   },
   {
-    id: 3, icon: org, title: 'Feature 3',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
-  }];
+    id: 3,
+    icon: icon5,
+    title: "Create your Profile",
+    description: `Save your frequent locations and appointment reminders.`,
+  },
+];
 
-const valuePropositions = [{
-  id: 1, icon: icon1, path: '#!', title: 'Reason 1', 
-  description: `Primary Reason that customers find values`,
-},
-{
-  id: 2, icon: icon2, path: '#!', title: 'Reason 2',
-  description: `Additional Content for reason 2`,
-},
-{
-  id: 3, icon: icon3, path: '#!', title: 'Reason 3',
-  description: `Additional Content for reason 3`,
-}];
-const benefitted = [{id: 1, label: 'John Doe'},{id: 2, label: 'Jane Smith'},{id: 3, label: 'Jack Wilks'}]
-
-
+const valuePropositions = [
+  {
+    id: 1,
+    icon: individual,
+    title: "Free for you",
+    description: `Our service is completely free for consumers, no hidden fees ever.`,
+  },
+  {
+    id: 2,
+    icon: chat,
+    title: "Not just an App",
+    description: `You can schedule a ride within our mobile app or via text/call.`,
+  },
+  {
+    id: 3,
+    icon: icon3,
+    title: "Accessible Vehicles",
+    description: `Our authorized vehicles are fully equipped to accommodate your mobility needs.`,
+  },
+];
+const benefitted = [
+  { id: 1, label: "Patients" },
+  { id: 2, label: "Healthcare Organizations" },
+  { id: 3, label: "Volunteers" },
+];
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout logoName={productName}>
-        <Banner productName={productName} tagline={tagline} img={image1}/>
-        <Services visionStatement={visionStatement} feature={features}/>
+        <Banner productName={productName} tagline={tagline} img={image1} />
+        <Services visionStatement={visionStatement} feature={features} />
         <UltimateFeatures valuePropositions={valuePropositions} />
-        <WorkHard benefitted={benefitted} img={image2}/>
+        <WorkHard benefitted={benefitted} img={image2} />
       </Layout>
     </ThemeProvider>
   );

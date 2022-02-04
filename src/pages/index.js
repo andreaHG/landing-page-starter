@@ -12,7 +12,7 @@ import {
   icon3,
   icon4,
   icon5,
-  chat,
+  icon7,
 } from "assets/images/icons";
 import workHard from "assets/images/wheel-chair.jpeg";
 import banner from "assets/images/person-care-rides.jpeg";
@@ -57,7 +57,7 @@ const valuePropositions = [
   },
   {
     id: 2,
-    icon: chat,
+    icon: icon7,
     title: "Not just an App",
     description: `You can schedule a ride within our mobile app or via text/call.`,
   },

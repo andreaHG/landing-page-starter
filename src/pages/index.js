@@ -13,7 +13,7 @@ import workHard from 'assets/images/work-hard.png';
 console.log('image: ', banner);
 const image1 = banner;
 const image2 = workHard;
-const productName = 'Product Name';
+const productName = 'CareRides';
 
 const tagline = 'In one line Why is your product important to users';
 
